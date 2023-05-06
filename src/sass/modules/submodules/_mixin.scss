@@ -1,0 +1,62 @@
+@mixin navbar() {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  border-bottom: 5px solid #fff;
+  ul {
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+
+    li::after {
+      content: '';
+      height: 3px;
+      width: 0;
+      background: #e3ddc5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+    }
+
+    li:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+@mixin banner() {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0)), url(/src/assets/wavekanazawa.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin content() {
+  padding: 70px 150px;
+  transform: translateY(0);
+  text-align: center;
+  color:#fff;
+  h1 {
+    font-size: 70px;
+    margin-top: 80px;
+  }
+  p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+  }
+}
+
+
